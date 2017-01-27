@@ -1,0 +1,653 @@
+{
+  "status": {
+    "msg": "OK",
+    "credits": "1",
+    "remaining_credits": "39926",
+    "code": "0"
+  },
+  "quotation_list": [
+
+  ],
+  "entity_list": [
+    {
+      "form": "Bala",
+      "variant_list": [
+        {
+          "endp": "54",
+          "inip": "51",
+          "form": "bala"
+        }
+      ],
+      "sementity": {
+        "id": "ODENTITY_FIRST_NAME",
+        "type": "Top>Person>FirstName",
+        "class": "instance",
+        "fiction": "nonfiction"
+      },
+      "relevance": "100",
+      "id": "35435f7594",
+      "semld_list": [
+        "sumo:FirstName"
+      ]
+    },
+    {
+      "form": "Bala",
+      "variant_list": [
+        {
+          "endp": "54",
+          "inip": "51",
+          "form": "bala"
+        }
+      ],
+      "sementity": {
+        "id": "ODENTITY_GEO_POLITICAL_ENTITY",
+        "type": "Top>Location>GeoPoliticalEntity",
+        "class": "instance",
+        "fiction": "nonfiction"
+      },
+      "relevance": "100",
+      "id": "b6993fe322",
+      "semld_list": [
+        "od:ZW4ud2lraTpCYWxhLF9OZXBhbA",
+        "http://en.wikipedia.org/wiki/Bala,_Nepal",
+        "http://rdf.freebase.com/ns/m.04zxc3g",
+        "http://sws.geonames.org/7801258/",
+        "http://yago-knowledge.org/resource/Bala,_Nepal",
+        "sumo:GeopoliticalArea"
+      ]
+    },
+    {
+      "relevance": "100",
+      "variant_list": [
+        {
+          "endp": "105",
+          "inip": "93",
+          "form": "Rajeev Ranjan"
+        }
+      ],
+      "id": "__15245467513651536944",
+      "form": "Rajeev Ranjan",
+      "sementity": {
+        "confidence": "unknown",
+        "type": "Top>Person>FullName",
+        "class": "instance"
+      }
+    },
+    {
+      "relevance": "100",
+      "variant_list": [
+        {
+          "endp": "145",
+          "inip": "124",
+          "form": "Freshers Resume Sample"
+        }
+      ],
+      "id": "__4663199383167227481",
+      "form": "Freshers Resume Sample",
+      "sementity": {
+        "confidence": "unknown",
+        "type": "Top",
+        "class": "instance"
+      }
+    },
+    {
+      "relevance": "100",
+      "variant_list": [
+        {
+          "endp": "167",
+          "inip": "149",
+          "form": "Shiv Sundar Email"
+        }
+      ],
+      "id": "__12592573044584889522",
+      "form": "Shiv Sundar Email",
+      "sementity": {
+        "confidence": "unknown",
+        "type": "Top>Person>FullName",
+        "class": "instance"
+      }
+    },
+    {
+      "relevance": "100",
+      "variant_list": [
+        {
+          "endp": "189",
+          "inip": "181",
+          "form": "gmail.com"
+        }
+      ],
+      "id": "__4551872364781386444",
+      "form": "gmail.com",
+      "sementity": {
+        "confidence": "unknown",
+        "type": "Top>Id>Url",
+        "class": "instance"
+      }
+    },
+    {
+      "relevance": "100",
+      "variant_list": [
+        {
+          "endp": "597",
+          "inip": "576",
+          "form": "Mechanical Engineering"
+        }
+      ],
+      "id": "__896214242355513016",
+      "form": "Mechanical Engineering",
+      "sementity": {
+        "confidence": "unknown",
+        "type": "Top",
+        "class": "instance"
+      }
+    },
+    {
+      "relevance": "100",
+      "variant_list": [
+        {
+          "endp": "621",
+          "inip": "599",
+          "form": "XCV Engineering College"
+        }
+      ],
+      "id": "__11474343371621237950",
+      "form": "XCV Engineering College",
+      "sementity": {
+        "confidence": "unknown",
+        "type": "Top>Organization>EducationalOrganization>University",
+        "class": "instance"
+      }
+    },
+    {
+      "relevance": "100",
+      "variant_list": [
+        {
+          "endp": "786",
+          "inip": "784",
+          "form": "IIT"
+        }
+      ],
+      "id": "__11909371421003152012",
+      "form": "IIT",
+      "sementity": {
+        "confidence": "unknown",
+        "type": "Top",
+        "class": "instance"
+      }
+    }
+  ],
+  "concept_list": [
+    {
+      "form": "occasion",
+      "variant_list": [
+        {
+          "endp": "266",
+          "inip": "256",
+          "form": "opportunity"
+        }
+      ],
+      "sementity": {
+        "id": "ODENTITY_OCCASION",
+        "type": "Top>Event>Occasion",
+        "class": "class",
+        "fiction": "nonfiction"
+      },
+      "relevance": "100",
+      "id": "ff4684e54e",
+      "semld_list": [
+        "sumo:Meeting"
+      ]
+    },
+    {
+      "form": "ability",
+      "variant_list": [
+        {
+          "endp": "395",
+          "inip": "390",
+          "form": "skills"
+        }
+      ],
+      "sementity": {
+        "id": "ODENTITY_TOP",
+        "type": "Top",
+        "class": "class",
+        "fiction": "nonfiction"
+      },
+      "relevance": "100",
+      "id": "a05755d6dc",
+      "semld_list": [
+        "sumo:Entity"
+      ]
+    },
+    {
+      "form": "personality",
+      "variant_list": [
+        {
+          "endp": "461",
+          "inip": "451",
+          "form": "Personality"
+        }
+      ],
+      "sementity": {
+        "id": "ODENTITY_PERSON",
+        "type": "Top>Person",
+        "class": "class",
+        "fiction": "nonfiction"
+      },
+      "relevance": "100",
+      "id": "e89f090a63",
+      "semld_list": [
+        "sumo:Human"
+      ]
+    },
+    {
+      "semtheme_list": [
+        {
+          "type": "Top>Sport",
+          "id": "ODTHEME_SPORT"
+        }
+      ],
+      "form": "team",
+      "variant_list": [
+        {
+          "endp": "548",
+          "inip": "545",
+          "form": "team"
+        }
+      ],
+      "sementity": {
+        "id": "ODENTITY_SPORTS_TEAM",
+        "type": "Top>Organization>SportsOrganization>SportsTeam",
+        "class": "class",
+        "fiction": "nonfiction"
+      },
+      "relevance": "100",
+      "id": "850f498d65",
+      "semld_list": [
+        "sumo:Organization"
+      ]
+    },
+    {
+      "form": "team",
+      "variant_list": [
+        {
+          "endp": "548",
+          "inip": "545",
+          "form": "team"
+        }
+      ],
+      "sementity": {
+        "id": "ODENTITY_ORGANIZATION",
+        "type": "Top>Organization",
+        "class": "class",
+        "fiction": "nonfiction"
+      },
+      "relevance": "100",
+      "id": "aa3272df9e",
+      "semld_list": [
+        "sumo:Organization"
+      ]
+    },
+    {
+      "form": "technical knowledge",
+      "variant_list": [
+        {
+          "endp": "689",
+          "inip": "671",
+          "form": "Technical Knowledge"
+        }
+      ],
+      "official_form": "Technical knowledge",
+      "sementity": {
+        "id": "ODENTITY_TOP",
+        "type": "Top",
+        "class": "class",
+        "fiction": "nonfiction"
+      },
+      "relevance": "100",
+      "id": "29d1f12c92",
+      "semld_list": [
+        "sumo:Entity"
+      ]
+    },
+    {
+      "form": "event",
+      "variant_list": [
+        {
+          "endp": "779",
+          "inip": "775",
+          "form": "Event"
+        }
+      ],
+      "sementity": {
+        "id": "ODENTITY_EVENT",
+        "type": "Top>Event",
+        "class": "class",
+        "fiction": "nonfiction"
+      },
+      "relevance": "100",
+      "id": "648ab069d7",
+      "semld_list": [
+        "sumo:Meeting"
+      ]
+    }
+  ],
+  "relation_list": [
+    {
+      "endp": "189",
+      "form": "about resume need more cleared template kaviya bala.k 01 - 20 - 2015 resume resume Rajeev Ranjan 12 - 11 - 2014 Freshers Resume Sample Shiv Sundar Email ID - ****@gmail.com",
+      "degree": "1",
+      "complement_list": [
+        {
+          "type": "isComplement",
+          "form": "about"
+        },
+        {
+          "type": "isDirectObject",
+          "form": "need more cleared template kaviya bala.k 01 - 20 - 2015 resume resume Rajeev Ranjan 12 - 11 - 2014 Freshers Resume Sample Shiv Sundar Email ID"
+        }
+      ],
+      "verb": {
+        "sense_id_list": [
+          "ODENTITY_COMMUNICATION_PROCESS",
+          "ODENTITY_INTENTIONAL_PROCESS",
+          "ODENTITY_PROCESS"
+        ],
+        "lemma_list": [
+          "resume"
+        ],
+        "form": "resume"
+      },
+      "inip": "0"
+    },
+    {
+      "endp": "170",
+      "degree": "1",
+      "form": "about resume need more cleared template kaviya bala.k 01 - 20 - 2015 resume resume Rajeev Ranjan 12 - 11 - 2014 Freshers Resume Sample Shiv Sundar Email ID - ****@gmail.com",
+      "complement_list": [
+        {
+          "type": "isRestrictiveApposition",
+          "form": ".k 01 - 20 - 2015 resume resume Rajeev Ranjan 12 - 11 - 2014 Freshers Resume Sample"
+        },
+        {
+          "type": "isRestrictiveApposition",
+          "form": ".k 01 - 20 - 2015 resume resume Rajeev Ranjan 12 - 11 - 2014 Freshers Resume Sample"
+        },
+        {
+          "type": "isCoreference",
+          "form": "my excellent interpersonal skills"
+        }
+      ],
+      "verb": {
+        "semantic_lemma": "be",
+        "lemma_list": [
+          "be"
+        ],
+        "form": "(be)"
+      },
+      "inip": "20",
+      "subject": {
+        "sense_id_list": [
+          "__4663199383167227481"
+        ],
+        "lemma_list": [
+          "Freshers Resume Sample"
+        ],
+        "form": ".k 01 - 20 - 2015 resume resume Rajeev Ranjan 12 - 11 - 2014 Freshers Resume Sample"
+      }
+    },
+    {
+      "endp": "395",
+      "degree": "1",
+      "form": "Contact No.+91 - ****** Objective - To get a career opportunity which would help me to utilize my academic background to assist me to gain experience, employ my excellent interpersonal skills, enable me to make positive contribution.",
+      "complement_list": [
+        {
+          "type": "isDirectObject",
+          "form": "my excellent interpersonal skills"
+        }
+      ],
+      "verb": {
+        "sense_id_list": [
+          "ODENTITY_INTENTIONAL_PROCESS",
+          "ODENTITY_JOINING_AN_ORGANIZATION"
+        ],
+        "lemma_list": [
+          "employ"
+        ],
+        "form": "employ"
+      },
+      "inip": "356",
+      "subject": {
+        "sense_id_list": [
+          "ff4684e54e"
+        ],
+        "lemma_list": [
+          "opportunity"
+        ],
+        "form": "a career opportunity which would help me to utilize my academic background to assist me to gain"
+      }
+    },
+    {
+      "endp": "353",
+      "degree": "1",
+      "form": "Contact No.+91 - ****** Objective - To get a career opportunity which would help me to utilize my academic background to assist me to gain experience, employ my excellent interpersonal skills, enable me to make positive contribution.",
+      "complement_list": [
+
+      ],
+      "verb": {
+        "sense_id_list": [
+          "ODENTITY_INTENTIONAL_PSYCHOLOGICAL_PROCESS",
+          "ODENTITY_PROCESS"
+        ],
+        "lemma_list": [
+          "experience"
+        ],
+        "form": "experience"
+      },
+      "inip": "194",
+      "subject": {
+        "sense_id_list": [
+          "ff4684e54e"
+        ],
+        "lemma_list": [
+          "opportunity"
+        ],
+        "form": "a career opportunity which would help me to utilize my academic background to assist me to gain"
+      }
+    },
+    {
+      "endp": "341",
+      "degree": "2",
+      "form": "Contact No.+91 - ****** Objective - To get a career opportunity which would help me to utilize my academic background to assist me to gain experience, employ my excellent interpersonal skills, enable me to make positive contribution.",
+      "complement_list": [
+
+      ],
+      "verb": {
+        "lemma_list": [
+          "help"
+        ],
+        "form": "would help"
+      },
+      "inip": "268",
+      "subject": {
+        "sense_id_list": [
+          "ff4684e54e"
+        ],
+        "lemma_list": [
+          "opportunity"
+        ],
+        "form": "a career opportunity which would help me to utilize my academic background to assist me to gain"
+      }
+    },
+    {
+      "endp": "353",
+      "degree": "1",
+      "form": "Contact No.+91 - ****** Objective - To get a career opportunity which would help me to utilize my academic background to assist me to gain experience, employ my excellent interpersonal skills, enable me to make positive contribution.",
+      "complement_list": [
+
+      ],
+      "verb": {
+        "sense_id_list": [
+          "ODENTITY_INTENTIONAL_PSYCHOLOGICAL_PROCESS",
+          "ODENTITY_PROCESS"
+        ],
+        "lemma_list": [
+          "experience"
+        ],
+        "form": "experience"
+      },
+      "inip": "194",
+      "subject": {
+        "lemma_list": [
+          "background"
+        ],
+        "form": "my academic background to assist me to gain"
+      }
+    },
+    {
+      "endp": "444",
+      "degree": "1",
+      "form": "Contact No.+91 - ****** Objective - To get a career opportunity which would help me to utilize my academic background to assist me to gain experience, employ my excellent interpersonal skills, enable me to make positive contribution.",
+      "complement_list": [
+
+      ],
+      "verb": {
+        "sense_id_list": [
+          "ODENTITY_PROCESS"
+        ],
+        "lemma_list": [
+          "enable"
+        ],
+        "form": "enable"
+      },
+      "inip": "406",
+      "subject": {
+        "sense_id_list": [
+          "a05755d6dc"
+        ],
+        "lemma_list": [
+          "skill"
+        ],
+        "form": "my excellent interpersonal skills"
+      }
+    },
+    {
+      "endp": "621",
+      "degree": "1",
+      "form": "Personality Traits - - Self motivated - Punctual - Flexible and can work in a team Academia - B.E in Mechanical Engineering XCV Engineering College.",
+      "complement_list": [
+        {
+          "type": "isComplement",
+          "form": "in a team Academia"
+        },
+        {
+          "type": "isComplement",
+          "form": "in Mechanical Engineering"
+        }
+      ],
+      "verb": {
+        "lemma_list": [
+          "work"
+        ],
+        "form": "can work"
+      },
+      "inip": "531",
+      "subject": {
+        "lemma_list": [
+          "self"
+        ],
+        "form": "Self"
+      }
+    },
+    {
+      "endp": "525",
+      "degree": "1",
+      "form": "Personality Traits - - Self motivated - Punctual - Flexible and can work in a team Academia - B.E in Mechanical Engineering XCV Engineering College.",
+      "complement_list": [
+
+      ],
+      "verb": {
+        "sense_id_list": [
+          "ODENTITY_PROCESS"
+        ],
+        "lemma_list": [
+          "motivate"
+        ],
+        "form": "motivated"
+      },
+      "inip": "451",
+      "subject": {
+        "lemma_list": [
+          "self"
+        ],
+        "form": "Self"
+      }
+    },
+    {
+      "endp": "786",
+      "degree": "1",
+      "form": "Achievements - - Secured III rank in XCV Event in IIT.",
+      "complement_list": [
+        {
+          "type": "isComplement",
+          "form": "in XCV"
+        },
+        {
+          "type": "isComplement",
+          "form": "in IIT"
+        }
+      ],
+      "verb": {
+        "sense_id_list": [
+          "ODENTITY_CLASSIFYING"
+        ],
+        "lemma_list": [
+          "rank"
+        ],
+        "form": "rank"
+      },
+      "inip": "728",
+      "subject": {
+        "lemma_list": [
+          "III"
+        ],
+        "form": "Secured III"
+      }
+    }
+  ],
+  "money_expression_list": [
+
+  ],
+  "time_expression_list": [
+    {
+      "endp": "71",
+      "form": ".k 01 - 20 - 2015",
+      "precision": "day",
+      "inip": "55",
+      "actual_time": "2015-01-20",
+      "normalized_form": "21||||2015|01|20||||"
+    },
+    {
+      "endp": "71",
+      "form": "01 - 20 - 2015",
+      "precision": "day",
+      "inip": "58",
+      "actual_time": "2015-01-20",
+      "normalized_form": "21||||2015|01|20||||"
+    },
+    {
+      "endp": "120",
+      "form": "12 - 11 - 2014",
+      "precision": "day",
+      "inip": "107",
+      "actual_time": "2014-11-12",
+      "normalized_form": "21||||2014|11|12||||"
+    }
+  ],
+  "other_expression_list": [
+
+  ],
+  "quantity_expression_list": [
+
+  ]
+}
