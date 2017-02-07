@@ -1,8 +1,10 @@
 import PyPDF2
 import requests
 import glob
+import fnmatch
 from gui import *
 from reportlab.pdfgen import canvas
+import os
 
 technologies = ["Java","php", "c", "Oracle","jdbc","servlet", "C++", "English","hibernate", "HTML", "javascript", "Django","k"]
 list1 = [element.lower() for element in technologies]
@@ -25,15 +27,18 @@ class mainClass:
             allText += text
         return allText
 
-    def getFullName(self, output):
-        for dataDict in output["entity_list"]:
-            sem = dataDict["sementity"]
-            type = sem['type']
-            if "FullName" in type:
-                print "Its a Full Name "
-                print dataDict["form"]
-                my_file.write("\n" + dataDict["form"] + " ----> ")
-                break
+    def getFullName(self, output,fileName):
+        try:
+            for dataDict in output["entity_list"]:
+                sem = dataDict["sementity"]
+                type = sem['type']
+                if "FullName" in type:
+                    print "Its a Full Name "
+                    print dataDict["form"]
+                    my_file.write("\n" + dataDict["form"] + " ----> ")
+                    break
+        except :
+            my_file.write("\nError In PDF  " +fileName)
 
     def init(self, fileText):
         url = 'https://api.meaningcloud.com/topics-2.0'
@@ -59,36 +64,36 @@ class mainClass:
         word_list = [element.lower() for element in word_list]
         return set(word_list).intersection(a_string.lower().split())
 
+
     def start(self):
+        if not self.current_dir:
+            print "error"
+            ec = ExitDilagoueWindow()
+            ec.init("ERROR Select a folder")
+
+        fileCount = len(fnmatch.filter(os.listdir(self.current_dir), '*.pdf'))
+        if not fileCount:
+            ec = ExitDilagoueWindow()
+            ec.init("ERROR Selected folder dosen't contain any .PDF file")
+
         print self.current_dir
         for filename in glob.glob(self.current_dir + '/*.pdf'):
             print "files names :", filename
             pageOneText = self.readPageOne(filename)
             fileText = self.readfile(filename)
-            # print "filetext", fileText
-            splittedText = fileText.split(" ")
-            # list2 = [element.lower() for element in splittedText]
 
             output = self.init(pageOneText)
-            self.getFullName(output)
+            self.getFullName(output,filename)
 
             for word in self.words_in_string(technologies, fileText):
                 my_file.write(" " + word + " ")
                 print(word)
 
-                # for tech in technologies:
-                #     var = str(tech)
-                #     if tech.lower() in fileText.lower():
-                #         print "found ", tech
-                #         my_file.write(" " + tech + " ")
-                #  if var.encode('utf-8').lower() in fileText.lower():
-                #  print var.encode('utf-8').lower()
-                # print "found ", tech
-                #  my_file.write(" " + tech + " ")
-
-
 if __name__ == "__main__":
-    mc = mainClass()
-    root = Tk()
-    od = openDialog(mc, root)
-    root.mainloop()
+    try:
+        mc = mainClass()
+        root = Tk()
+        od = openDialog(mc, root)
+        root.mainloop()
+    except:
+        print "Exception occurred"
