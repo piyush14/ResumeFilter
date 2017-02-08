@@ -13,6 +13,7 @@ class openDialog(Frame):
         self.mc = mc
 
     def createWidgets(self):
+
         self.fFrame = Frame(self.root)
         self.root.title("FILTER RESUME")
 
@@ -21,6 +22,7 @@ class openDialog(Frame):
         self.svDir = StringVar()
         self.eDir = Entry(self.fFrame, width=70, textvariable=self.svDir)
         self.eDir.pack()
+
         self.bSelDir = Button(self.fFrame, text="select dir")
         self.filterResume = Button(self.fFrame, text="filter resume")
         self.bSelDir["command"] = self.getDir
@@ -39,24 +41,28 @@ class openDialog(Frame):
     def getCurrentDir(self):
         return dir_path
 
-
-
     def filter(self):
-       # try:
         self.mc.start()
         print "in filter function"
 
         ec = ExitDilagoueWindow()
-        ec.init("FINISHED : Output file created")
+        ec.init("\tFINISHED : Output file created on DESKTOP\t ", "exit")
 
 
 class ExitDilagoueWindow:
-    def build(self,master):
+    def build(self, master, action):
         frame = Frame(master)
         frame.pack()
-        button = Button(frame,
-                             text="close", fg="red",
-                             command=master.destroy)
+        if action == "close":
+            button = Button(frame,
+                            text=" CLOSE ", fg="red",
+                            command=master.destroy)
+
+        if action == "exit":
+            button = Button(frame,
+                            text=" EXIT ", fg="red",
+                            command=quit)
+
         button.pack(side=LEFT)
 
     def closeFunction(self,root):
@@ -64,12 +70,17 @@ class ExitDilagoueWindow:
         top = Toplevel()
         print "show"
 
-
-    def init(self,message):
+    def init(self, message, action):
         root = Tk()
-        root.title("Complete")
-        label = Label(root, fg="DARK GREEN")
+
+        if action == "close":
+            root.title("ERROR")
+
+        if action == "exit":
+            root.title("COMPLETE")
+
+        label = Label(root, fg="BLACK")
         label.pack()
         label.config(text=str(message))
-        self.build(root)
+        self.build(root, action)
         root.mainloop()

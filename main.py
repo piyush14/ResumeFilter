@@ -5,14 +5,16 @@ import fnmatch
 from gui import *
 from reportlab.pdfgen import canvas
 import os
+from technologyList import technologies
 
-technologies = ["Java","php", "c", "Oracle","jdbc","servlet", "C++", "English","hibernate", "HTML", "javascript", "Django","k"]
-list1 = [element.lower() for element in technologies]
-my_file = open("out.txt", "w")
+# technologies = ["Java","php", "c", "Oracle","jdbc","servlet", "C++", "English","hibernate", "HTML", "javascript", "Django","k"]
+# list1 = [element.lower() for element in technologies]
+
+DesktopFilename = os.getenv("HOMEDRIVE") + os.getenv("HOMEPATH") + "\\Desktop\FilterResume.txt"
+desktop_file = file(DesktopFilename, "w")
 
 class mainClass:
     current_dir = ""
-    c = canvas.Canvas('test.pdf')
     def set_current_dir(self, dir_name):
         print dir_name
         self.current_dir = dir_name
@@ -35,10 +37,10 @@ class mainClass:
                 if "FullName" in type:
                     print "Its a Full Name "
                     print dataDict["form"]
-                    my_file.write("\n" + dataDict["form"] + " ----> ")
+                    desktop_file.write("\n" + dataDict["form"] + " ----> ")
                     break
-        except :
-            my_file.write("\nError In PDF  " +fileName)
+        except:
+            desktop_file.write("\nError In PDF  " + fileName)
 
     def init(self, fileText):
         url = 'https://api.meaningcloud.com/topics-2.0'
@@ -69,14 +71,15 @@ class mainClass:
         if not self.current_dir:
             print "error"
             ec = ExitDilagoueWindow()
-            ec.init("ERROR Select a folder")
+            ec.init("\tERROR : Select a folder\t ", "close")
 
         fileCount = len(fnmatch.filter(os.listdir(self.current_dir), '*.pdf'))
         if not fileCount:
             ec = ExitDilagoueWindow()
-            ec.init("ERROR Selected folder dosen't contain any .PDF file")
+            ec.init("\tERROR : Selected folder dosen't contain any .PDF file\t ", "close")
 
         print self.current_dir
+
         for filename in glob.glob(self.current_dir + '/*.pdf'):
             print "files names :", filename
             pageOneText = self.readPageOne(filename)
@@ -86,7 +89,7 @@ class mainClass:
             self.getFullName(output,filename)
 
             for word in self.words_in_string(technologies, fileText):
-                my_file.write(" " + word + " ")
+                desktop_file.write(" " + word + " ")
                 print(word)
 
 if __name__ == "__main__":
