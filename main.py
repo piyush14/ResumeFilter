@@ -12,7 +12,8 @@ from technologyList import technologies
 
 DesktopFilename = os.getenv("HOMEDRIVE") + os.getenv("HOMEPATH") + "\\Desktop\FilterResume.txt"
 desktop_file = file(DesktopFilename, "w")
-
+global flag
+flag = True
 class mainClass:
     current_dir = ""
     def set_current_dir(self, dir_name):
@@ -69,14 +70,19 @@ class mainClass:
 
     def start(self):
         if not self.current_dir:
-            print "error"
-            ec = ExitDilagoueWindow()
-            ec.init("\tERROR : Select a folder\t ", "close")
-
+            try:
+                print "error"
+                ec = ExitDilagoueWindow()
+                flag = False
+                ec.init("\tERROR : Select a folder\t ", "close", flag)
+                root.protocol('WM_DELETE_WINDOW', quit())
+            except Exception:
+                pass
         fileCount = len(fnmatch.filter(os.listdir(self.current_dir), '*.pdf'))
         if not fileCount:
             ec = ExitDilagoueWindow()
-            ec.init("\tERROR : Selected folder dosen't contain any .PDF file\t ", "close")
+            flag = False
+            ec.init("\tERROR : Selected folder dosen't contain any .PDF file\t ", "close", flag)
 
         print self.current_dir
 
@@ -91,7 +97,8 @@ class mainClass:
             for word in self.words_in_string(technologies, fileText):
                 desktop_file.write(" " + word + " ")
                 print(word)
-
+                flag = True
+        return flag
 if __name__ == "__main__":
     try:
         mc = mainClass()

@@ -42,15 +42,17 @@ class openDialog(Frame):
         return dir_path
 
     def filter(self):
-        self.mc.start()
+        flag = self.mc.start()
         print "in filter function"
 
-        ec = ExitDilagoueWindow()
-        ec.init("\tFINISHED : Output file created on DESKTOP\t ", "exit")
+        if flag:
+            ec = ExitDilagoueWindow()
+            ec.init("\tFINISHED : Output file created on DESKTOP\t ", "exit", flag)
 
 
 class ExitDilagoueWindow:
-    def build(self, master, action):
+    def build(self, master, action, flag):
+        print flag
         frame = Frame(master)
         frame.pack()
         if action == "close":
@@ -65,12 +67,13 @@ class ExitDilagoueWindow:
 
         button.pack(side=LEFT)
 
+
     def closeFunction(self,root):
         root.destroy()
         top = Toplevel()
         print "show"
 
-    def init(self, message, action):
+    def init(self, message, action, flag):
         root = Tk()
 
         if action == "close":
@@ -82,5 +85,5 @@ class ExitDilagoueWindow:
         label = Label(root, fg="BLACK")
         label.pack()
         label.config(text=str(message))
-        self.build(root, action)
+        self.build(root, action, flag)
         root.mainloop()
